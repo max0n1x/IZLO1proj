@@ -1,3 +1,3 @@
 # IZLO
 
-1 project VUT FIT 2023
+1 IZLO project VUT FIT 2023
