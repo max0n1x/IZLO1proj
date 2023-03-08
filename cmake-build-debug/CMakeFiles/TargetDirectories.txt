@@ -1,0 +1,3 @@
+/Users/zxc/Desktop/FIT/IZLO/projekt1-kostra/cmake-build-debug/CMakeFiles/projekt1_kostra.dir
+/Users/zxc/Desktop/FIT/IZLO/projekt1-kostra/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/zxc/Desktop/FIT/IZLO/projekt1-kostra/cmake-build-debug/CMakeFiles/rebuild_cache.dir
