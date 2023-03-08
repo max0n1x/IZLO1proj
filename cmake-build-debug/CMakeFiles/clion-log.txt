@@ -1,4 +1,4 @@
-"/Users/zxc/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=/Users/zxc/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/ninja/mac/ninja" -G Ninja -S /Users/zxc/Desktop/FIT/IZLO/projekt1-kostra -B /Users/zxc/Desktop/FIT/IZLO/projekt1-kostra/cmake-build-debug
+"/Users/zxc/Library/Application Support/JetBrains/Toolbox/apps/CLion/ch-0/222.4345.21/CLion.app/Contents/bin/cmake/mac/bin/cmake" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /Users/zxc/Desktop/FIT/IZLO/projekt1-kostra -B /Users/zxc/Desktop/FIT/IZLO/projekt1-kostra/cmake-build-debug
 -- The C compiler identification is AppleClang 14.0.0.14000029
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done

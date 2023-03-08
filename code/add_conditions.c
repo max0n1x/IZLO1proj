@@ -93,7 +93,8 @@ void add_prerequisities_to_formula(CNF *formula, Prerequisity *prerequisites, un
 
         Clause *clause = create_new_clause(num_of_subjects, num_of_semesters);
 
-        if (prerequisites[i].later_subject == 0 || prerequisites[i].later_subject == num_of_semesters) {
+        if (prerequisites[i].later_subject == prerequisites[0].earlier_subject
+        || prerequisites[i].later_subject == num_of_semesters) {
 
             add_clause_to_formula(clause, formula);
             continue;
