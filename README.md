@@ -1,3 +1,5 @@
 # IZLO
 
-1 IZLO project VUT FIT 2023
+## First IZLO project VUT FIT 2023
+
+### Final evaluation: 10/10
