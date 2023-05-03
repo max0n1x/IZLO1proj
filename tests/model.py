@@ -114,7 +114,7 @@ class Model:
         for (first, second) in self.input.prerequisities:
             first_index = self.find_semester(first)
             second_index = self.find_semester(second)
-            if first >= second:
+            if first_index >= second_index:
                 raise ModelError(
                     f"Nesprávný model: prerekvizita {first} < {second} není splněna"
                 )

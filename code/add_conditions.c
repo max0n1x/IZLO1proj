@@ -1,5 +1,6 @@
 #include <stddef.h>
 #include "cnf.h"
+#include "stdio.h"
 
 //
 // LOGIN: xpodho08
@@ -47,7 +48,6 @@ void each_subject_enrolled_at_least_once(CNF *formula, unsigned num_of_subjects,
         add_clause_to_formula(subject_clause, formula);
 
     }
-
 }
 
 // Tato funkce by mela do formule pridat klauzule predstavujici podminku b)
@@ -91,28 +91,23 @@ void add_prerequisities_to_formula(CNF *formula, Prerequisity *prerequisites, un
 
     for (unsigned i = 0; i < num_of_prerequisites; ++i) {
 
-        Clause *clause = create_new_clause(num_of_subjects, num_of_semesters);
+        for (unsigned semester_j = 0; semester_j < num_of_semesters; ++semester_j) {
 
-        if (prerequisites[i].later_subject == prerequisites[0].earlier_subject
-        || prerequisites[i].later_subject == num_of_semesters) {
+            Clause *subject_clause = create_new_clause(num_of_subjects, num_of_semesters);
 
-            add_clause_to_formula(clause, formula);
-            continue;
+            add_literal_to_clause(subject_clause, false, prerequisites[i].earlier_subject, semester_j);
+
+            for (unsigned semester_k = semester_j + 1; semester_k < num_of_semesters; ++semester_k) {
+
+                add_literal_to_clause(subject_clause, true, prerequisites[i].later_subject, semester_k);
+
+            }
+
+            add_clause_to_formula(subject_clause, formula);
 
         }
-
-        for (unsigned j = 0; j < num_of_semesters; ++j) {
-
-            add_literal_to_clause(clause, false, prerequisites[i].later_subject, j);
-
-        }
-
-        add_literal_to_clause(clause, true, prerequisites[i].earlier_subject, i);
-
-        add_clause_to_formula(clause, formula);
 
     }
-
 }
 
 
